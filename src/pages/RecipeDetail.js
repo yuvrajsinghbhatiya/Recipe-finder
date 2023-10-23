@@ -29,7 +29,6 @@ const RecipeDetail = () => {
   }, [uri]);
 
   useEffect(() => {
-    // Check if the recipe is favorited in local storage
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     const isFavoritedInLocalStorage = favorites.some(
       (favorite) => favorite.uri === uri
@@ -38,20 +37,16 @@ const RecipeDetail = () => {
   }, [uri]);
 
   const handleToggleFavorite = () => {
-    // Toggle isFavorited state
     setIsFavorited(!isFavorited);
 
-    // Get current favorites from local storage or set to an empty array if there are no favorites yet
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
     if (isFavorited) {
-      // If the recipe is already in favorites, remove it
       const updatedFavorites = favorites.filter(
         (favorite) => favorite.uri !== uri
       );
       localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     } else {
-      // If the recipe is not in favorites, add it
       const newFavorite = { uri, recipeDetails };
       localStorage.setItem(
         "favorites",

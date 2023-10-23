@@ -1,5 +1,3 @@
-/* RecipeDetail.css */
-
 .recipe-title {
   font-size: 3rem;
   font-weight: 600;
@@ -38,9 +36,13 @@
 .recipe-content {
   flex: 0 0 100%;
   background-color: #e1dede;
-  padding: 12px;
   border-radius: 15px;
   margin-bottom: 1rem;
+}
+
+.ingredients{
+  padding: 12px;
+
 }
 
 .instructions li {

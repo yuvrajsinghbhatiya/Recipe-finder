@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Favorites.css";
 
 const Favorites = () => {
@@ -7,7 +8,8 @@ const Favorites = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const storedFavorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
       setFavorites(storedFavorites);
       setLoading(false);
     };
@@ -22,8 +24,17 @@ const Favorites = () => {
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <div className="favourite-container">
+      <FaArrowAltCircleLeft
+        className="back-icon"
+        size={32}
+        onClick={handleBack}
+      />
       <h1 className="fav-title">Favorite Recipes</h1>
       <div className="favorite-grid">
         {loading ? (
@@ -39,8 +50,13 @@ const Favorites = () => {
                     className="favorite-image"
                   />
                 )}
-                <h2 className="favorite-title">{favorite.recipeDetails.label}</h2>
-                <button className="remove-button" onClick={() => handleRemoveFavorite(index)}>
+                <h2 className="favorite-title">
+                  {favorite.recipeDetails.label}
+                </h2>
+                <button
+                  className="remove-button"
+                  onClick={() => handleRemoveFavorite(index)}
+                >
                   Remove from Favorites
                 </button>
               </div>

@@ -7,18 +7,18 @@ import "./Recipe.css";
 const Recipe = () => {
   const [search, setSearch] = useState("");
   const [recipes, setRecipes] = useState([]);
-  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [isLoading, setIsLoading] = useState(false); 
 
   const APP_ID = "bf8986d8";
   const APP_KEY = "2f82b75d0c7b1061b549c413852d2333";
 
   const handleSearch = async () => {
-    setIsLoading(true); // Set loader to true when fetching data
+    setIsLoading(true); 
     const response = await axios.get(
       `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     setRecipes(response.data.hits);
-    setIsLoading(false); // Set loader to false after fetching data
+    setIsLoading(false); 
   };
 
   const handleKeyPress = (event) => {
