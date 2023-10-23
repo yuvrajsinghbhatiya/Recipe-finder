@@ -1,0 +1,47 @@
+.navbar {
+  background-color: #f2f2f2;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-left .nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-style: italic;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right .nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1.2px solid black;
+}
+
+.nav-button {
+  background-color: transparent;
+  padding: 8px 18px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.nav-button:hover {
+  background-color: #e1dede;
+  color: black;
+  border: none;
+}

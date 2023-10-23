@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@400;500;600;700&family=Tilt+Neon&family=Ubuntu:ital,wght@1,700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e8e8e8;
+  min-height: 100vh;
+}

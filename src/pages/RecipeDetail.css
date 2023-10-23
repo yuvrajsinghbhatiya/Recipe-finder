@@ -1,0 +1,162 @@
+/* RecipeDetail.css */
+
+.recipe-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.recipe-detail {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.recipe-info {
+  display: flex;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recipe-image-container {
+  flex: 0 0 100%;
+  margin-bottom: 1rem;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.ingredients ul {
+  margin-top: 2rem;
+}
+
+.recipe-content {
+  flex: 0 0 100%;
+  background-color: #e1dede;
+  padding: 12px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.instructions li {
+  text-align: center;
+  list-style: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #333;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.ingredients,
+.instructions {
+  text-align: left;
+}
+
+.instructions {
+  text-align: center;
+  background-color: #e1dede;
+  padding: 12px;
+  border-radius: 15px;
+}
+
+.instructions li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #333;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 35px 0;
+}
+
+.recipe-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.fav-button {
+  background-color: #e1dede;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.fav-button.favorited {
+  background-color: #bebdbd;
+  color: black;
+}
+
+.fav-button:hover {
+  background-color: #e1dede;
+  color: black;
+}
+
+.loader {
+  border: 4px solid rgba(51, 50, 50, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #646363;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .recipe-info {
+    flex-wrap: nowrap;
+  }
+
+  .recipe-image-container {
+    flex: 0 0 40%;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .recipe-content {
+    flex: 1;
+  }
+}
