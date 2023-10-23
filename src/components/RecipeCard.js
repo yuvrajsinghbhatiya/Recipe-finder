@@ -6,14 +6,16 @@ const RecipeCard = ({ recipe }) => {
   const { label, image, uri } = recipe.recipe;
 
   return (
-    <div className="card">
-      <Link to={`/recipe/${encodeURIComponent(uri)}`}>
-        <div className="card__image-container">
-          <img src={image} className="card__image" alt={label} />
+    <div className="recipeCard-grid">
+      <div className="recipeCard-item">
+        <Link to={`/recipe/${encodeURIComponent(uri)}`}>
+          <div>
+            <img src={image} className="recipeCard-image" alt={label} />
+          </div>
+        </Link>
+        <div>
+          <h2 className="recipeCard-title">" {label} "</h2>
         </div>
-      </Link>
-      <div>
-        <h2 className="card__title">{label}</h2>
       </div>
     </div>
   );
