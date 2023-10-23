@@ -11,9 +11,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 51px;
   margin-top: 5rem;
-
+  width: 70vw;
 }
 
 
