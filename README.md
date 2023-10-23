@@ -38,5 +38,5 @@ Welcome to **YUMMIFY**, your one-stop destination for culinary inspiration! This
 ## Hosted Url-
 
 ```
-https://shopsee.vercel.app/
+https://recipe-finder-silk.vercel.app/
 ```
