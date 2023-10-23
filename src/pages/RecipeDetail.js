@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { LuUtensilsCrossed } from "react-icons/lu";
-import { PiBookOpenText } from "react-icons/pi";
 import axios from "axios";
 import "./RecipeDetail.css";
 
@@ -66,30 +65,11 @@ const RecipeDetail = () => {
           <h1 className="recipe-title">{recipeDetails.label}</h1>
 
           <div className="recipe-info-container">
-            <div className="recipe-info">
-              <div className="recipe-image-container">
-                <img
+            <img
                   src={recipeDetails.image}
                   alt={recipeDetails.label}
-                  className="recipe-image"
+                  className="recipe-image-large" 
                 />
-              </div>
-              <div className="recipe-content">
-                <div className="ingredients">
-                  <div className="row1">
-                    <h2 className="txt">Ingredients</h2>
-                    <h2 className="icon">
-                      <LuUtensilsCrossed />
-                    </h2>
-                  </div>
-                  <ul>
-                    {recipeDetails.ingredients.map((ingredient, index) => (
-                      <li key={index}>{ingredient.text}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
             <button
               className={`fav-button ${isFavorited ? "favorited" : ""}`}
               onClick={handleToggleFavorite}
@@ -98,18 +78,20 @@ const RecipeDetail = () => {
             </button>
           </div>
           <hr />
-          <div className="instructions">
-            <div className="row">
-              <h2>Instructions</h2>
-              <h2 className="icon">
-                <PiBookOpenText />
-              </h2>
+          <div className="recipe-content">
+            <div className="ingredients">
+              <div className="row1">
+                <h2 className="txt">Ingredients</h2>
+                <h2 className="icon">
+                  <LuUtensilsCrossed />
+                </h2>
+              </div>
+              <ul>
+                {recipeDetails.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient.text}</li>
+                ))}
+              </ul>
             </div>
-            <ol>
-              {recipeDetails.ingredientLines.map((instruction, index) => (
-                <li key={index}>{instruction}</li>
-              ))}
-            </ol>
           </div>
         </>
       ) : (
