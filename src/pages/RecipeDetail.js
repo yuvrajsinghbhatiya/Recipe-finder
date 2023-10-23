@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { LuUtensilsCrossed } from "react-icons/lu";
+import { PiBookOpenText } from "react-icons/pi";
 import axios from "axios";
 import "./RecipeDetail.css";
 
@@ -74,7 +76,12 @@ const RecipeDetail = () => {
               </div>
               <div className="recipe-content">
                 <div className="ingredients">
-                  <h2>Ingredients</h2>
+                  <div className="row1">
+                    <h2 className="txt">Ingredients</h2>
+                    <h2 className="icon">
+                      <LuUtensilsCrossed />
+                    </h2>
+                  </div>
                   <ul>
                     {recipeDetails.ingredients.map((ingredient, index) => (
                       <li key={index}>{ingredient.text}</li>
@@ -92,7 +99,12 @@ const RecipeDetail = () => {
           </div>
           <hr />
           <div className="instructions">
-            <h2>Instructions</h2>
+            <div className="row">
+              <h2>Instructions</h2>
+              <h2 className="icon">
+                <PiBookOpenText />
+              </h2>
+            </div>
             <ol>
               {recipeDetails.ingredientLines.map((instruction, index) => (
                 <li key={index}>{instruction}</li>

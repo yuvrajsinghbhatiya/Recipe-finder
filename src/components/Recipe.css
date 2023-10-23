@@ -50,7 +50,7 @@ input#search-bar {
   padding: 0 20px;
   font-size: 1rem;
   border: 1.2px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
   outline: none;
   transition: border 0.35s ease;
   background: transparent;
