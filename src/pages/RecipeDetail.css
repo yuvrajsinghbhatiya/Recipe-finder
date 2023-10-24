@@ -23,7 +23,6 @@
   max-height: 400px;
   border-radius: 10px;
   margin-top: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -87,8 +86,6 @@ hr {
   font-size: 1rem;
   transition: background-color 0.3s ease;
   margin-top: 2rem; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .fav-button.favorited {
