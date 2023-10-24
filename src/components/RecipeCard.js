@@ -9,9 +9,7 @@ const RecipeCard = ({ recipe }) => {
     <div className="recipeCard-grid">
       <div className="recipeCard-item">
         <Link to={`/recipe/${encodeURIComponent(uri)}`}>
-          <div>
             <img src={image} className="recipeCard-image" alt={label} />
-          </div>
         </Link>
         <div>
           <h2 className="recipeCard-title">{label}</h2>
