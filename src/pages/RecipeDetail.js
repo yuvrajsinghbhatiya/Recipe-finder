@@ -56,6 +56,10 @@ const RecipeDetail = () => {
     }
   };
 
+  const handleViewRecipe = () => {
+    window.open(recipeDetails.url, "_blank");
+  }
+
   return (
     <div className="recipe-detail">
       {loading ? (
@@ -65,18 +69,52 @@ const RecipeDetail = () => {
           <h1 className="recipe-title">{recipeDetails.label}</h1>
 
           <div className="recipe-info-container">
+            <div className="info-row">
+              <div className="info-item">
+                <strong>Meal Type:</strong> {recipeDetails.mealType}
+              </div>
+              <div className="info-item">
+                <strong>Cuisine Type:</strong> {recipeDetails.cuisineType}
+              </div>
+            </div>
             <img
-                  src={recipeDetails.image}
-                  alt={recipeDetails.label}
-                  className="recipe-image-large" 
-                />
-            <button
-              className={`fav-button ${isFavorited ? "favorited" : ""}`}
-              onClick={handleToggleFavorite}
-            >
-              {isFavorited ? "Remove from Favorites" : "Add to Favorites"}
-            </button>
+              src={recipeDetails.image}
+              alt={recipeDetails.label}
+              className="recipe-image-large"
+            />
+
+            <div className="btn-row">
+              <button className="fav-button" onClick={handleViewRecipe}>
+                View Recipe
+              </button>
+              <button className="fav-button" onClick={handleToggleFavorite}>
+                {isFavorited ? "Remove from Favorites" : "Add to Favorites"}
+              </button>
+            </div>
+            
           </div>
+
+          <div className="nutrients-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Calories</th>
+                  <th>Fat</th>
+                  <th>Protein</th>
+                  <th>Carbs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{(recipeDetails.calories).toFixed(2)}</td>
+                  <td>{(recipeDetails.totalNutrients.FAT.quantity).toFixed(2)}. {recipeDetails.totalNutrients.FAT.unit}</td>
+                  <td>{(recipeDetails.totalNutrients.PROCNT.quantity).toFixed(2)} {recipeDetails.totalNutrients.PROCNT.unit}</td>
+                  <td>{(recipeDetails.totalNutrients.CHOCDF.quantity.toFixed(2))} {recipeDetails.totalNutrients.CHOCDF.unit}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <hr />
           <div className="recipe-content">
             <div className="ingredients">

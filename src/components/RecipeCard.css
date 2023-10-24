@@ -1,9 +1,9 @@
 .recipeCard-item{
   text-align: center;
-  background-color: #f9f9f9;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  background-color: #c5ccda5b;
+  border-radius: 10px;
 }
+
 
 
 .recipeCard-image {
@@ -19,4 +19,6 @@
   padding: 10px;
   font-family: "Poppins", sans-serif;
   text-align: left;
+  color: #2f3133;
+
 }

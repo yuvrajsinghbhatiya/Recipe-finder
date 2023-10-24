@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Favorites.css";
 
 const Favorites = () => {
@@ -24,17 +23,11 @@ const Favorites = () => {
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
-  const handleBack = () => {
-    window.history.back();
-  };
+
 
   return (
     <div className="favourite-container">
-      <FaArrowAltCircleLeft
-        className="back-icon"
-        size={32}
-        onClick={handleBack}
-      />
+
       <h1 className="fav-title">Favorite Recipes</h1>
       <div className="favorite-grid">
         {loading ? (
