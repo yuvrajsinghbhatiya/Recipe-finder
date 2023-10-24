@@ -14,7 +14,7 @@ const RecipeCard = ({ recipe }) => {
           </div>
         </Link>
         <div>
-          <h2 className="recipeCard-title">" {label} "</h2>
+          <h2 className="recipeCard-title">{label}</h2>
         </div>
       </div>
     </div>
