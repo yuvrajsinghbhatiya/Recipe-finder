@@ -119,8 +119,8 @@ table {
 
 th,
 td {
-  text-align: left;
-  padding: 10px;
+  text-align: center;
+  padding: 5px;
   border: 1px solid #b6b1b1;
   background-color: #ffffff;
 }
@@ -202,6 +202,11 @@ th {
   .recipe-content {
     flex: 1;
   }
+
+
+  th, td{
+    font-size: .8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -221,4 +226,12 @@ th {
   li {
     font-size: 1rem;
   }
+
+  table{
+    width: 100%;}
+
+    th, td{
+      font-size: .8rem;
+    }
+  
 }
