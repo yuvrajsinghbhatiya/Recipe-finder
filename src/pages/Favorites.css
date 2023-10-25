@@ -20,7 +20,6 @@
 
 .favorite-item {
   text-align: center;
-  background-color: #ffffff;
   border-radius: 5px;
   gap: 10px;
   overflow: hidden;
@@ -41,28 +40,36 @@
 }
 
 .favorite-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-align: left;
   color: #2f3133;
+  margin-left: 5px;
+  padding: 2px;
+  text-transform: uppercase;
 }
 
-.remove-button {
-  background-color: #2f3133;
-  color: white;
-  border: none;
-  font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 5px;
+h2 span{
+  color: #2f3133;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.close-icon{
   cursor: pointer;
-  font-size: 0.8rem;
-  transition: background-color 0.3s ease;
-  margin-bottom: 1rem;
+  color: #2f3133;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-.remove-button:hover {
-  background-color: black;
-  color: white;
-}
 
 .loader {
   border: 4px solid rgba(51, 50, 50, 0.3);

@@ -9,11 +9,12 @@ const RecipeCard = ({ recipe }) => {
     <div className="recipeCard-grid">
       <div className="recipeCard-item">
         <Link to={`/recipe/${encodeURIComponent(uri)}`}>
-            <img src={image} className="recipeCard-image" alt={label} />
+          <img src={image} className="recipeCard-image" alt={label} />
         </Link>
-        <div>
-          <h2 className="recipeCard-title">{label}</h2>
-        </div>
+        <div></div>
+      </div>
+      <div className="recipeCard-title">
+        <p>{label.split(" ").slice(0, 3).join(" ")}</p>
       </div>
     </div>
   );

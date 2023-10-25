@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
 import "./Favorites.css";
 
 const Favorites = () => {
@@ -23,11 +24,8 @@ const Favorites = () => {
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
-
-
   return (
     <div className="favourite-container">
-
       <h1 className="fav-title">Favorite Recipes</h1>
       <div className="favorite-grid">
         {loading ? (
@@ -43,15 +41,20 @@ const Favorites = () => {
                     className="favorite-image"
                   />
                 )}
-                <h2 className="favorite-title">
-                  {favorite.recipeDetails.label}
-                </h2>
-                <button
-                  className="remove-button"
-                  onClick={() => handleRemoveFavorite(index)}
-                >
-                  Remove from Favorites
-                </button>
+                <div className="row2">
+                  <h2 className="favorite-title">
+                    {favorite.recipeDetails.label
+                      .split(" ")
+                      .slice(0, 2)
+                      .join(" ")}
+                  </h2>
+                  <h2 className="icon">
+                    <AiFillCloseCircle
+                      className="close-icon"
+                      onClick={() => handleRemoveFavorite(index)}
+                    />
+                  </h2>
+                </div>
               </div>
             ) : null
           )

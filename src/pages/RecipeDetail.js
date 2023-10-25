@@ -66,7 +66,7 @@ const RecipeDetail = () => {
         <div className="loader"></div>
       ) : recipeDetails ? (
         <>
-          <h1 className="recipe-title">{recipeDetails.label}</h1>
+          <h1 className="recipe-title">{recipeDetails.label.split(" ").slice(0, 3).join(" ")}</h1>
 
           <div className="recipe-info-container">
             <div className="info-row">
